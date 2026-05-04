@@ -1,3 +1,4 @@
+import Featured from "@/components/homepage/Featured";
 import Hero from "@/components/homepage/Hero";
 import React from "react";
 
@@ -7,6 +8,7 @@ const HomePage = () => {
       <header>
         <Hero/>
       </header>
+      <Featured/>
     </>
   );
 };
