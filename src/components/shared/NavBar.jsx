@@ -9,7 +9,7 @@ const NavBar = () => {
         {path: '/all-animals', pathName : "All Animals"},
     ]
   return (
-    <div className="shadow-sm">
+    <div className="shadow-sm z-20">
       <div className="navbar max-w-7xl mx-auto items-center">
         <div className="navbar-start">
           <div className="dropdown">
