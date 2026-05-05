@@ -1,4 +1,4 @@
-import {  Playfair_Display, Poppins } from "next/font/google";
+import {  Montserrat, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
 import Hero from "@/components/homepage/Hero";
@@ -6,6 +6,11 @@ import Hero from "@/components/homepage/Hero";
 
 export const playfair = Playfair_Display({
   subsets: ['latin'],
+  weight : ['400', '500', '600', '700', '800']
+});
+export const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight : ['400', '500', '600', '700', '800']
 });
 
 export const poppins = Poppins({

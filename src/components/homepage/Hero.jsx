@@ -1,16 +1,16 @@
 import Image from "next/image";
 import HeroImg from "@/assets/hero.png";
-import { playfair } from "@/app/layout";
+import { montserrat, playfair } from "@/app/layout";
 import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div className="py-10 px-5 ">
+    <div className="py-16 px-5 ">
       <div className="max-w-7xl mx-auto min-h-screen flex flex-col items-center justify-center gap-6">
         <div className="text-center space-y-6">
           <h2
-            className={`text-5xl sm:text-6xl ${playfair.className} font-bold `}
+            className={`text-5xl sm:text-6xl ${montserrat.className} font-bold `}
           >
             Smart Way to Book Your <br />{" "}
             <span className="text-[#2A3D2D]">Qurbani Animal</span>
