@@ -2,6 +2,7 @@ import {  Montserrat, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
 import Hero from "@/components/homepage/Hero";
+import Footer from "@/components/shared/Footer";
 
 
 export const playfair = Playfair_Display({
@@ -35,7 +36,13 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar/>
         </header>
-        {children}</body>
+        <main>
+          {children}
+        </main>
+        <footer>
+          <Footer/>
+        </footer>
+        </body>
     </html>
   );
 }
