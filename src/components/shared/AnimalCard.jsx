@@ -10,7 +10,7 @@ import { RiShoppingCartFill } from "react-icons/ri";
 
 const AnimalCard = ({ animal }) => {
   return (
-    <div className="rounded-lg shadow-lg overflow-hidden  flex flex-col ">
+    <div className="rounded-xl shadow-lg overflow-hidden  flex flex-col ">
       <div className=" relative w-full h-[200px] p-2">
         <Image
           src={animal.image}
