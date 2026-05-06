@@ -19,7 +19,7 @@ const AnimalCard = ({ animal }) => {
           className="  object-cover "
         />
       </div>
-      <div className="p-4 mt-4 bg-white space-y-2 flex-grow">
+      <div className="p-4  mt-4 bg-white space-y-2 flex-grow">
         <h2
           className={`text-xl  ${montserrat.className}  font-bold text-[#2A3D2D]`}
         >
@@ -72,7 +72,7 @@ const AnimalCard = ({ animal }) => {
           </button>
         </Link>
         <Link
-          href={"/"}
+          href={`/all-animals/${animal.id}`}
           className="btn rounded-lg  transition text-[#2A3D2D] border border-[#2A3D2D] "
         >
           <button className="flex items-center gap-2 cursor-pointer font-medium">
