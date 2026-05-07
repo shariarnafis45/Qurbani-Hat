@@ -9,11 +9,11 @@ const Footer = () => {
           <Image src={Logo} width={200} height={100} alt="logo" />
           <p className="font-semibold tracking-wide text-gray-200">QurbaniHat Livestock Booking Platform</p>
         </aside>
-        <nav className="-mt-3">
-          <div className="flex gap-8">
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
+        <nav className="-mt-3 ">
+          <div className="flex gap-8 ">
+            <a className="link link-hover text-white">Terms of use</a>
+            <a className="link link-hover text-white">Privacy policy</a>
+            <a className="link link-hover text-white">Cookie policy</a>
           </div>
         </nav>
         <nav>
