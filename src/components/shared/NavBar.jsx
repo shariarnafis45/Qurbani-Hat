@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/assets/logo.png";
 import NavLinks from "@/components/shared/NavLinks"
+import NavLoginSignUp from "./NavLoginSignUp";
 
 const NavBar = () => {
     const navLinks = [
@@ -46,13 +47,8 @@ const NavBar = () => {
             {navLinks.map((link, i)=> <NavLinks key={i} path={link.path}>{link.pathName}</NavLinks> )}
           </ul>
         </div>
-        <div className="navbar-end gap-3">
-          <Link href={"/signin"} className="btn bg-[#2A3D2D] text-white">
-            <button >Login</button>
-          </Link>
-          <Link href={"/signup"} className="btn bg-[#2A3D2D] text-white">
-            <button >SignUp</button>
-          </Link>
+        <div className="navbar-end ">
+          <NavLoginSignUp/>
         </div>
       </div>
     </div>
