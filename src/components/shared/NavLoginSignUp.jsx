@@ -5,12 +5,14 @@ import Link from "next/link";
 import React, { use, useEffect, useState } from "react";
 import { BeatLoader, ClipLoader } from "react-spinners";
 import Avater from "@/assets/user.png";
+import { redirect } from "next/navigation";
 
 const NavLoginSignUp = () => {
   const [userImgSrc, setUserImgSrc] = useState(Avater);
 
   const handleSignOut = async () => {
     await authClient.signOut();
+    redirect('/')
   };
   const { data: session, isPending } = authClient.useSession();
 
