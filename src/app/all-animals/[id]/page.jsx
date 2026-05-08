@@ -1,3 +1,4 @@
+import BookingForm from "@/components/all-animals/BookingForm";
 import { getAnimalDetails } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
@@ -11,13 +12,13 @@ const AnimalDetailsPage = async ({ params }) => {
 
   return (
     <div className="max-w-7xl mx-auto my-15 px-5">
-      <div className="flex w-11/12 gap-10 items-center justify-center flex-col sm:flex-row">
+      <div className="flex w-11/12 gap-10 items-center justify-center flex-col lg:flex-row">
         <div>
           <Image
             className="rounded-lg"
             src={animal.image}
-            width={400}
-            height={400}
+            width={900}
+            height={500}
             alt={animal.name}
           />
         </div>
@@ -68,16 +69,12 @@ const AnimalDetailsPage = async ({ params }) => {
             <p className="font-medium text-[#2A3D2D] text-[0.9rem] ">
               {animal.description}
             </p>
-            <Link
-              href={"/"}
-              className="btn rounded-lg  transition bg-[#2A3D2D] text-white w-full mt-5"
-            >
-              <button className="flex items-center gap-2 cursor-pointer font-medium">
-                <RiShoppingCartFill />
-                Book Now
-              </button>
-            </Link>
+           
+            {/* Booking Form */}
           </div>
+            <div className="p-5" id="book">
+              <BookingForm animal={animal}/>
+            </div>
          
         </div>
       </div>

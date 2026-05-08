@@ -20,7 +20,7 @@ const NavLoginSignUp = () => {
         <BeatLoader />
       ) : user ? (
         <div className="flex gap-3 items-center">
-          <p> {user.name}</p>
+          <p className="hidden sm:flex"> {user.name}</p>
           <Image
             src={user.image || Avater}
             height={40}
@@ -31,7 +31,7 @@ const NavLoginSignUp = () => {
           <Link
             onClick={handleSignOut}
             href={"/"}
-            className="btn hidden sm:flex bg-[#2A3D2D] text-white"
+            className="btn  bg-[#2A3D2D] text-white"
           >
             <button className="cursor-pointer">SignOut</button>
           </Link>

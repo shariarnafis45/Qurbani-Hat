@@ -63,7 +63,7 @@ const AnimalCard = ({ animal }) => {
       </div>
       <div className="flex flex-col justify-center  gap-2 px-2 pb-4">
         <Link
-          href={"/"}
+          href={`/all-animals/${animal.id}/#book`}
           className="btn rounded-lg  transition bg-[#2A3D2D] text-white w-full"
         >
           <button className="flex items-center gap-2 cursor-pointer font-medium">
