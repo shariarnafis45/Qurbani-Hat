@@ -3,12 +3,16 @@ import { FaAngleRight } from "react-icons/fa6";
 
 import { getAnimals } from "@/lib/data";
 import AnimalCard from "@/components/shared/AnimalCard";
+import Sort from "@/components/all-animals/Sort";
 
 export const metadata = {
   title: "QurbaniHat | All Animals",
 };
-const AllAnimalsPage = async () => {
+const AllAnimalsPage = async ({ searchParams }) => {
   const animalsData = await getAnimals();
+  const url = await searchParams;
+  const sortAsc = [...animalsData].sort((a, b) => a.price - b.price);
+  const sortDsc = [...animalsData].sort((a, b) => b.price - a.price);
 
   return (
     <div className="bg-[#FAF9F8]">
@@ -23,18 +27,18 @@ const AllAnimalsPage = async () => {
               Home <FaAngleRight /> All Animals
             </p>
           </div>
-          <div className="font-medium">
-            <select defaultValue="l-h" className="select">
-              <option value="l-h">Sort By Price: Low To High</option>
-              <option value="h-l">Sort By Price: High to Low</option>
-            </select>
-          </div>
+
+          <Sort />
         </div>
         {/* animals cards section*/}
         <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-8 mt-10">
-          {animalsData.map((animal) => (
-            <AnimalCard key={animal.id} animal={animal} />
-          ))}
+          {url.sort === "h-l"
+            ? sortDsc.map((animal) => (
+                <AnimalCard key={animal.id} animal={animal} />
+              ))
+            : sortAsc.map((animal) => (
+                <AnimalCard key={animal.id} animal={animal} />
+              ))}
         </div>
       </div>
     </div>

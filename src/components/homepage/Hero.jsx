@@ -6,8 +6,8 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const Hero = () => {
   return (
-    <div className="py-20 px-5 ">
-      <div className="max-w-7xl mx-auto lg:min-h-screen flex flex-col items-center justify-center gap-6 animate__animated  animate__fadeInUp">
+    <div className="py-20 px-5 animate__animated animate__fadeInUp">
+      <div  className="max-w-7xl mx-auto lg:min-h-screen flex flex-col items-center justify-center gap-6  ">
         <div className="text-center space-y-6">
           <h2
             className={`text-5xl sm:text-6xl ${montserrat.className} font-bold `}

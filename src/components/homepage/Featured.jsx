@@ -6,7 +6,7 @@ const Featured = async () => {
   const animalsData = await getAnimals();
 
   return (
-    <div className="max-w-7xl mx-auto pb-20 px-5">
+    <div className="max-w-7xl mx-auto pb-20 px-5 animate__animated animate__fadeInUp">
       <div className=" text-center space-y-3 animate__animated  animate__fadeInUp">
         <h2 className="text-4xl font-bold">Featured Livestock</h2>
         <p className="text-[#2A3D2D]">Handpicked animals from trusted farms — ready for your Qurbani.</p>

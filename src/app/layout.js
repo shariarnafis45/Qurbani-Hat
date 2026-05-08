@@ -3,6 +3,7 @@ import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
 import 'animate.css';
 
+
 import Footer from "@/components/shared/Footer";
 
 import { ToastContainer } from "react-toastify";
@@ -25,13 +26,13 @@ export const poppins = Poppins({
 
 export const metadata = {
   title: "QurbaniHat-Livestock Booking Platform",
-  
 };
 
 export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
       data-theme="light"
       className={`${poppins.className} h-full antialiased`}
     >
@@ -39,9 +40,7 @@ export default function RootLayout({ children }) {
         <header>
           <NavBar />
         </header>
-        <main>
-          {children}
-        </main>
+        <main>{children}</main>
         <footer>
           <Footer />
         </footer>
