@@ -5,16 +5,17 @@ import TopBreeds from "@/components/homepage/TopBreeds";
 import { Toast } from "@heroui/react";
 import React from "react";
 
+
+
 const HomePage = () => {
   return (
     <>
       <header>
-        <Hero/>
+        <Hero />
       </header>
-      <Featured/>
-      <Tips/>
-      <TopBreeds/>
-      
+      <Featured />
+      <Tips />
+      <TopBreeds />
     </>
   );
 };
