@@ -1,6 +1,7 @@
 import { Montserrat, Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
+import 'animate.css';
 
 import Footer from "@/components/shared/Footer";
 

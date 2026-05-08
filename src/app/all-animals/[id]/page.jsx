@@ -1,10 +1,18 @@
 import BookingForm from "@/components/all-animals/BookingForm";
 import { getAnimalDetails } from "@/lib/data";
 import Image from "next/image";
-import Link from "next/link";
-import { FaEye } from "react-icons/fa6";
+
 import { GoDotFill } from "react-icons/go";
-import { RiShoppingCartFill } from "react-icons/ri";
+export const generateMetadata = async ({params}) => {
+  const {id} = await params;
+  const animal = await getAnimalDetails(id);
+  return {
+    title: `QurbaniHat | ${animal.name}`,
+    
+  };
+};
+
+
 
 const AnimalDetailsPage = async ({ params }) => {
   const { id } = await params;

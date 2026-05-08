@@ -6,6 +6,10 @@ import { Toast } from "@heroui/react";
 import React from "react";
 
 
+export const metadata = {
+  title: "QurbaniHat | Home",
+  
+};
 
 const HomePage = () => {
   return (

@@ -1,10 +1,12 @@
 import React from "react";
 import { FaAngleRight } from "react-icons/fa6";
 
-
 import { getAnimals } from "@/lib/data";
 import AnimalCard from "@/components/shared/AnimalCard";
 
+export const metadata = {
+  title: "QurbaniHat | All Animals",
+};
 const AllAnimalsPage = async () => {
   const animalsData = await getAnimals();
 
@@ -22,7 +24,7 @@ const AllAnimalsPage = async () => {
             </p>
           </div>
           <div className="font-medium">
-            <select  defaultValue="l-h" className="select">
+            <select defaultValue="l-h" className="select">
               <option value="l-h">Sort By Price: Low To High</option>
               <option value="h-l">Sort By Price: High to Low</option>
             </select>
