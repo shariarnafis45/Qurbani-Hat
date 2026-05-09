@@ -1,11 +1,11 @@
 "use client";
 import GoogleSignIn from "@/components/auth/Google";
 import { authClient } from "@/lib/auth-client";
+import Link from "next/link";
 import { redirect } from "next/navigation";
 
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-
 
 const SignUpPage = () => {
   const {
@@ -26,7 +26,6 @@ const SignUpPage = () => {
       toast.error(`${error.message}`, {
         position: "bottom-center",
         theme: "colored",
-        
       });
       return;
     }
@@ -34,10 +33,9 @@ const SignUpPage = () => {
       toast.success("SignUp Succesfull", {
         position: "bottom-center",
         theme: "colored",
-        
       });
     }
-    redirect('/')
+    redirect("/");
   };
 
   return (
@@ -113,6 +111,12 @@ const SignUpPage = () => {
               </button>
             </fieldset>
           </form>
+          <p className="text-[#929292] font-semibold text-xs mt-2 text-center">
+            Have An Account ?{" "}
+            <Link href={"/signin"} className="text-[#F75B5F]  ml-1">
+              Login
+            </Link>
+          </p>
 
           <div className="space-y-4 mt-4">
             <GoogleSignIn />
