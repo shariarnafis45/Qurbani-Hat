@@ -6,7 +6,7 @@
 
 ## 🌐 Live URL
 
-🔗 [https://qurbanihat.vercel.app](https://qurbanihat.vercel.app)
+🔗 [https://qurbani-hat-nafix.vercel.app/]
 
 ---
 
